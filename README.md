@@ -20,3 +20,13 @@ You can manually invoke monopath-emulator like this:
 set MONO_PATH=C:\Directory\Containing\Library
 monopath-emulator[-win].(clr2|clr4).exe Application.exe
 ```
+
+monopath-emulator is usually used in [Zero Install feeds](http://0install.net/interface-spec.html) like this:
+```xml
+<command name="run" path="Application.exe">
+	<runner interface="http://0install.de/feeds/cli/cli-monopath.xml" />
+</command>
+<requires interface="http://some/library.xml">
+	<environment name="MONO_PATH" insert="." />
+</requires>
+```
