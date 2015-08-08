@@ -46,8 +46,9 @@ static class MonoPathEmulator
 					Path.Combine(assembly.CultureInfo.TwoLetterISOLanguageName, Path.Combine(assembly.Name, assembly.Name))
 				};
 
-		string[] directories = (Environment.GetEnvironmentVariable("MONO_PATH") ?? "").Split(Path.PathSeparator);
-		foreach (string directory in directories)
+		string monoPath = Environment.GetEnvironmentVariable("MONO_PATH");
+		if (string.IsNullOrEmpty(monoPath)) return null;
+		foreach (string directory in monoPath.Split(Path.PathSeparator))
 		{
 			foreach (string prefix in prefixCandidates)
 			{
