@@ -2,39 +2,38 @@
 <interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
 	<name>Common Language Infrastructure with MONO_PATH support for command-line applications</name>
 	<summary xml:lang="en">an implementation of the Common Language Infrastructure (.NET Framework on Windows, Mono on POSIX) using .NET profiles as version numbers</summary>
-	<homepage>https://github.com/nano-byte/monopath-emulator</homepage>
 	<needs-terminal />
 	<feed-for interfacae="http://0install.de/feeds/cli/cli-monopath-terminal.xml" />
 	<group arch="Windows-*">
-		<implementation version="2.0" id="netfx-2.0">
+		<implementation version="2.0" id="netfx-2.0" local-path=".">
 			<command name="run" path="monopath-emulator.clr2.exe">
 				<runner interface="http://0install.de/feeds/cli/netfx.xml">
 					<version not-before="2.0" before="3.0" />
 				</runner>
 			</command>
 		</implementation>
-		<implementation version="3.0" id="netfx-3.0">
+		<implementation version="3.0" id="netfx-3.0" local-path=".">
 			<command name="run" path="monopath-emulator.clr2.exe">
 				<runner interface="http://0install.de/feeds/cli/netfx.xml">
 					<version not-before="3.0" before="3.5" />
 				</runner>
 			</command>
 		</implementation>
-		<implementation version="3.5" id="netfx-3.5">
+		<implementation version="3.5" id="netfx-3.5" local-path=".">
 			<command name="run" path="monopath-emulator.clr2.exe">
 				<runner interface="http://0install.de/feeds/cli/netfx.xml">
 					<version not-before="3.5" before="4.0" />
 				</runner>
 			</command>
 		</implementation>
-		<implementation version="4.0" id="netfx-4.0">
+		<implementation version="4.0" id="netfx-4.0" local-path=".">
 			<command name="run" path="monopath-emulator.clr4.exe">
 				<runner interface="http://0install.de/feeds/cli/netfx.xml">
 					<version not-before="4.0" before="4.5" />
 				</runner>
 			</command>
 		</implementation>
-		<implementation version="4.5" id="netfx-4.5">
+		<implementation version="4.5" id="netfx-4.5" local-path=".">
 			<command name="run" path="monopath-emulator.clr4.exe">
 				<runner interface="http://0install.de/feeds/cli/netfx.xml">
 					<version not-before="4.5" />

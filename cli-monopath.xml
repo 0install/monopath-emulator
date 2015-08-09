@@ -2,7 +2,6 @@
 <interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
 	<name>Common Language Infrastructure with MONO_PATH support</name>
 	<summary xml:lang="en">an implementation of the Common Language Infrastructure (.NET Framework on Windows, Mono on POSIX) using .NET profiles as version numbers</summary>
-	<homepage>https://github.com/nano-byte/monopath-emulator</homepage>
 	<feed-for interface="http://0install.de/feeds/cli/cli-monopath.xml" />
 	<group arch="Windows-*">
 		<implementation version="2.0" id="netfx-2.0" local-path=".">
