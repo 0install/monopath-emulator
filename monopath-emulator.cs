@@ -54,13 +54,13 @@ static class MonoPathEmulator
 			{
 				string assemblyPath = Path.Combine(directory, prefix + ".dll");
 				if (File.Exists(assemblyPath))
-					return Assembly.LoadFile(assemblyPath);
+					return Assembly.LoadFrom(assemblyPath);
 			}
 			foreach (string prefix in prefixCandidates)
 			{
 				string assemblyPath = Path.Combine(directory, prefix + ".exe");
 				if (File.Exists(assemblyPath))
-					return Assembly.LoadFile(assemblyPath);
+					return Assembly.LoadFrom(assemblyPath);
 			}
 		}
 		return null;
